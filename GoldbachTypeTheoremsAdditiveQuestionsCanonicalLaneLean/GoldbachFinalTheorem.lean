@@ -1,0 +1,13 @@
+import canonicalLaneMathlib.AdmissibleClass
+
+namespace HautevilleHouse
+namespace GoldbachTypeTheoremsAdditiveQuestionsCanonicalLaneLean
+
+def ConstrainedGoldbachClosure (A : GoldbachAdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_goldbach_endgame (A : GoldbachAdmissibleClass) : ConstrainedGoldbachClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end GoldbachTypeTheoremsAdditiveQuestionsCanonicalLaneLean
+end HautevilleHouse
